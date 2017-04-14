@@ -34,6 +34,7 @@ namespace Shadowsocks.Controller
         private PrivoxyRunner privoxyRunner;
         private GFWListUpdater gfwListUpdater;
         public AvailabilityStatistics availabilityStatistics = AvailabilityStatistics.Instance;
+        public bool NeedToLogin;
         public StatisticsStrategyConfiguration StatisticsConfiguration { get; private set; }
 
         private long _inboundCounter = 0;
@@ -83,6 +84,10 @@ namespace Shadowsocks.Controller
             _strategyManager = new StrategyManager(this);
             StartReleasingMemory();
             StartTrafficStatistics(61);
+            if (_config!=null)
+            {
+                NeedToLogin = string.IsNullOrEmpty(_config.userPassword) || string.IsNullOrEmpty(_config.userPort);
+            }
         }
 
         public void Start()

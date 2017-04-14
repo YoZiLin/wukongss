@@ -80,7 +80,15 @@ namespace Shadowsocks
                 Logging.OpenLogFile();
 #endif
                 MainController = new ShadowsocksController();
-                MenuController = new MenuViewController(MainController);
+                if (MainController.NeedToLogin)
+                {
+                    LoginForm loginForm = new LoginForm(MainController);
+                    loginForm.Show();
+                }
+                else
+                {
+                    MenuController = new MenuViewController(MainController);
+                }
                 HotKeys.Init(MainController);
                 MainController.Start();
                 Application.Run();
