@@ -1,0 +1,119 @@
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType0`2 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType1`2 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType2`2 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType3`4 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 StringEx 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Program 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.View.Win32 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.BandwidthScaleInfo 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.Utils 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ViewUtils 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.SystemProxy.ProxyException 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.SystemProxy.Sysproxy 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.Sockets.SocketUtil 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.IO_COUNTERS 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.JOBOBJECT_BASIC_LIMIT_INFORMATION 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.SECURITY_ATTRIBUTES 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.JOBOBJECT_EXTENDED_LIMIT_INFORMATION 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.JobObjectInfoType 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.ThreadUtil 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Properties.Settings 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Properties.Resources 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.EncryptorFactory 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.MbedTLS 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.RNG 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.Sodium 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.Stream.StreamEncryptor 生成存根: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.Stream.StreamMbedTLSEncryptor 生成存根: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.Stream.StreamSodiumEncryptor 生成存根: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.AEAD.AEADEncryptor 生成存根: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.AEAD.AEADMbedTLSEncryptor 生成存根: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.AEAD.AEADSodiumEncryptor 生成存根: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AutoStartup 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.FileManager 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.I18N 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.PortForwarder 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.UDPRelay 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.LRUCache`2 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.LRUCacheItem`2 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.TCPRelay 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.TCPHandler 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.PrivoxyRunner 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.SystemProxy 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.HighAvailabilityStrategy 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.StatisticsStrategy 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.BalancingStrategy 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.StrategyManager 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.IStrategyCallerType 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Hotkeys.HotkeyCallbacks 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Hotkeys.HotKeys 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Costura.AssemblyLoader 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 ProcessedByFody 生成存根: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType0`2 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType1`2 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType2`2 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 <>f__AnonymousType3`4 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 StringEx 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Program 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.View.LogForm+TrafficInfo 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.View.QRCodeForm+<>c 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.View.Win32 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.View.StatisticsStrategyConfigurationForm+<>c 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.SystemProxy.ProxyException 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.SystemProxy.Sysproxy+RET_ERRORS 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.Sockets.SocketUtil+DnsEndPoint2 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.Sockets.WrappedSocket+FakeAsyncResult 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.Sockets.WrappedSocket+TcpUserToken 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.IO_COUNTERS 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.JOBOBJECT_BASIC_LIMIT_INFORMATION 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.JOBOBJECT_EXTENDED_LIMIT_INFORMATION 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.JobObjectInfoType 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Util.ProcessManagement.ThreadUtil 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Proxy.DirectConnect+FakeAsyncResult 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Proxy.DirectConnect+FakeEndPoint 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Proxy.HttpProxy+FakeAsyncResult 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Proxy.HttpProxy+HttpState 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Proxy.IProxy 生成填充码: 类型是一个接口。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Proxy.Socks5Proxy+FakeAsyncResult 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Proxy.Socks5Proxy+Socks5State 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Properties.Settings 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Properties.Resources 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Model.LogViewerConfig 生成填充码: 未能解析程序集“Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Model.StatisticsRecord+<>c 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Model.StatisticsStrategyConfiguration+<>c 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.IEncryptor 生成填充码: 类型是一个接口。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.Stream.StreamEncryptor 生成填充码: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Encryption.AEAD.AEADEncryptor 生成填充码: 未能解析程序集“Cyotek.Collections.Generic.CircularBuffer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+<>c 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+<>c__DisplayClass48_0 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+<>c__DisplayClass49_0 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+<>c__DisplayClass50_0 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+InOutBoundRecord 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+MyPing 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+PingState 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AvailabilityStatistics+UpdateRecordsState 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.AutoStartup 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Listener+<>c 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Listener+IService 生成填充码: 类型是一个接口。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.PortForwarder 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.UDPRelay 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.LRUCache`2 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.LRUCacheItem`2 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.UpdateChecker+Asset 生成填充码: 未能解析程序集“Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”。是否缺少程序集引用?。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.UpdateChecker+CheckUpdateTimer 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.TCPRelay 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.TCPHandler 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.PrivoxyRunner 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.ShadowsocksController+<>c__DisplayClass105_0 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.HighAvailabilityStrategy 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.StatisticsStrategy 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.BalancingStrategy 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.StrategyManager 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.IStrategyCallerType 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Strategy.IStrategy 生成填充码: 类型是一个接口。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Hotkeys.HotKeys+<>c__DisplayClass6_0 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Hotkeys.HotKeys+<>c__DisplayClass7_0 生成填充码: 类型不受支持，因为存在内部限制。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Shadowsocks.Controller.Hotkeys.HotKeys+HotKeyCallBackHandler 生成填充码: 类型是一个委托。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 Costura.AssemblyLoader 生成填充码: 类型对 exported or assembly(Shadowsocks.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\test\Fakes\Shadowsocks.fakes : warning : 无法为 ProcessedByFody 生成填充码: 类型是一个接口。

@@ -1,0 +1,55 @@
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.TextFormat 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.CimType 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ComparisonSettings 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementDateTimeConverter 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementEventArgs 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ObjectReadyEventArgs 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.CompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ObjectPutEventArgs 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ProgressEventArgs 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.EventArrivedEventArgs 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.StoppedEventArgs 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.EventArrivedEventHandler 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.StoppedEventHandler 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementStatus 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementObjectCollection 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ObjectReadyEventHandler 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.CompletedEventHandler 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ProgressEventHandler 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ObjectPutEventHandler 生成存根: 类型已密封。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.AuthenticationLevel 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ImpersonationLevel 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.PutType 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementOptions 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementPathConverter 生成存根: 类型对 exported or assembly(System.Management.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementQuery 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementQueryConverter 生成存根: 类型对 exported or assembly(System.Management.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementScopeConverter 生成存根: 类型对 exported or assembly(System.Management.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.PropertyData 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.PropertyDataCollection 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.QualifierData 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.QualifierDataCollection 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.MethodData 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.MethodDataCollection 生成存根: 类型没有系列可见的构造函数。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.CodeLanguage 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.Instrumentation.InstrumentationType 生成存根: 类型是一个值类型。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.TextFormat 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.CimType 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ComparisonSettings 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.EventArrivedEventHandler 生成填充码: 类型是一个委托。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.StoppedEventHandler 生成填充码: 类型是一个委托。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementStatus 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ObjectReadyEventHandler 生成填充码: 类型是一个委托。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.CompletedEventHandler 生成填充码: 类型是一个委托。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ProgressEventHandler 生成填充码: 类型是一个委托。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ObjectPutEventHandler 生成填充码: 类型是一个委托。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.AuthenticationLevel 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ImpersonationLevel 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.PutType 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementPathConverter 生成填充码: 类型对 exported or assembly(System.Management.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementQueryConverter 生成填充码: 类型对 exported or assembly(System.Management.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.ManagementScopeConverter 生成填充码: 类型对 exported or assembly(System.Management.Fakes) 不可见。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.CodeLanguage 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.Instrumentation.InstrumentationType 生成填充码: 类型是一个枚举。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.Instrumentation.IEvent 生成填充码: 类型是一个接口。
+F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\System.Management.fakes : warning : 无法为 System.Management.Instrumentation.IInstance 生成填充码: 类型是一个接口。
