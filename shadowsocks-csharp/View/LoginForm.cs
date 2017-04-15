@@ -17,7 +17,7 @@ namespace Shadowsocks.View
         private ShadowsocksController controller;
         private Configuration _modifiedConfiguration;
         public bool IsLoginAction = false;
-        public LoginForm(ShadowsocksController controller)
+        public LoginForm(ShadowsocksController controller, bool isCanelUse = false)
         {
             this.Dock = DockStyle.Fill;
             this.StartPosition = FormStartPosition.CenterParent;
@@ -26,7 +26,10 @@ namespace Shadowsocks.View
 
             _modifiedConfiguration = controller.GetConfigurationCopy();
 
-            this.FormClosed += LoginForm_FormClosed;
+            if (isCanelUse)
+            {
+                this.FormClosed += LoginForm_FormClosed;
+            }
 
             methodList.SelectedIndex = 0;
         }

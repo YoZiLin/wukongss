@@ -38,7 +38,7 @@ namespace Shadowsocks.View
             LoadCurrentConfiguration();
         }
 
-        
+
 
         private void UpdateTexts()
         {
@@ -223,14 +223,14 @@ namespace Shadowsocks.View
             _lastSelectedIndex = ServersListBox.SelectedIndex;
         }
 
-        private void DuplicateButton_Click( object sender, EventArgs e )
+        private void DuplicateButton_Click(object sender, EventArgs e)
         {
             if (!SaveOldSelectedServer())
             {
                 return;
             }
             Server currServer = _modifiedConfiguration.configs[_lastSelectedIndex];
-            var currIndex = _modifiedConfiguration.configs.IndexOf( currServer );
+            var currIndex = _modifiedConfiguration.configs.IndexOf(currServer);
             _modifiedConfiguration.configs.Insert(currIndex + 1, currServer);
             LoadConfiguration(_modifiedConfiguration);
             ServersListBox.SelectedIndex = currIndex + 1;
@@ -369,7 +369,7 @@ namespace Shadowsocks.View
             _modifiedConfiguration.userPort = string.Empty;
             _modifiedConfiguration.configs = new List<Server>();
             controller.SaveConfiguration(_modifiedConfiguration);
-            LoginForm loginForm = new LoginForm(controller);
+            LoginForm loginForm = new LoginForm(controller, true);
             loginForm.Show();
             Program.MenuController._notifyIcon.Visible = false;
             controller.Stop();

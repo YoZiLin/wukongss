@@ -113,7 +113,7 @@ namespace Shadowsocks
             }
             else
             {
-                Application_ApplicationExit(sender, e);
+                Application.Exit();
             }
         }
 
