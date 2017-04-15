@@ -36,39 +36,9 @@ namespace Shadowsocks.View
             controller.ConfigChanged += controller_ConfigChanged;
 
             LoadCurrentConfiguration();
-
-            AutoConfig();
         }
 
-        private void AutoConfig()
-        {
-            string mgs = string.Empty;
-            string pwd = "lzy138008";
-            int port = 5494;
-            string method = "salsa20";
-            var nodes = LoginHelp.LoginAction(pwd, port.ToString(), ref mgs);
-            if (nodes.Count > 0)
-            {
-                foreach (var item in nodes)
-                {
-                    Server server = new Server() {
-                        password = pwd,
-                        server_port=port,
-                        method=method,
-                        server=item.server,
-                        remarks=item.remark
-                    };
-                    _modifiedConfiguration.configs.Add(server);
-                    LoadConfiguration(_modifiedConfiguration);
-                }
-                controller.SaveServers(_modifiedConfiguration.configs, _modifiedConfiguration.localPort);
-                controller.SelectServerIndex(0);
-            }
-            else
-            {
-                MessageBox.Show(mgs);
-            }
-        }
+        
 
         private void UpdateTexts()
         {
@@ -383,6 +353,27 @@ namespace Shadowsocks.View
             {
                 MoveConfigItem(+1);  // +1 means move forward
             }
+        }
+
+        private void BtnOK_Click(object sender, EventArgs e)
+        {
+            OKButton_Click(sender, e);
+            controller.Start();
+            controller.ToggleEnable(true);
+        }
+
+        private void BtnCanel_Click(object sender, EventArgs e)
+        {
+            _modifiedConfiguration.userMetod = string.Empty;
+            _modifiedConfiguration.userPassword = string.Empty;
+            _modifiedConfiguration.userPort = string.Empty;
+            _modifiedConfiguration.configs = new List<Server>();
+            controller.SaveConfiguration(_modifiedConfiguration);
+            LoginForm loginForm = new LoginForm(controller);
+            loginForm.Show();
+            Program.MenuController._notifyIcon.Visible = false;
+            controller.Stop();
+            this.Close();
         }
     }
 }

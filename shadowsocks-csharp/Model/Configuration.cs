@@ -32,6 +32,7 @@ namespace Shadowsocks.Model
         public HotkeyConfig hotkey;
         public string userPassword;
         public string userPort;
+        public string userMetod;
 
         private static string CONFIG_FILE = "gui-config.json";
 

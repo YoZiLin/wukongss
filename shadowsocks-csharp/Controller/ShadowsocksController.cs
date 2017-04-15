@@ -158,6 +158,12 @@ namespace Shadowsocks.Controller
             Configuration.Save(_config);
         }
 
+        public void SaveConfiguration(Configuration config)
+        {
+            _config = config;
+            Configuration.Save(config);
+        }
+
         public void SaveStrategyConfigurations(StatisticsStrategyConfiguration configuration)
         {
             StatisticsConfiguration = configuration;

@@ -26,7 +26,7 @@ namespace Shadowsocks.View
         private ShadowsocksController controller;
         private UpdateChecker updateChecker;
 
-        private NotifyIcon _notifyIcon;
+        public NotifyIcon _notifyIcon;
         private Bitmap icon_baseBitmap;
         private Icon icon_base, icon_in, icon_out, icon_both, targetIcon;
         private ContextMenu contextMenu1;

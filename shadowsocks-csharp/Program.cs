@@ -17,6 +17,8 @@ namespace Shadowsocks
         public static ShadowsocksController MainController { get; private set; }
         public static MenuViewController MenuController { get; private set; }
 
+        private static LoginForm loginForm { get; set; }
+
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -82,16 +84,36 @@ namespace Shadowsocks
                 MainController = new ShadowsocksController();
                 if (MainController.NeedToLogin)
                 {
-                    LoginForm loginForm = new LoginForm(MainController);
+                    loginForm = new LoginForm(MainController);
                     loginForm.Show();
+                    loginForm.FormClosed += LoginForm_FormClosed;
                 }
-                else
-                {
-                    MenuController = new MenuViewController(MainController);
-                }
-                HotKeys.Init(MainController);
-                MainController.Start();
-                Application.Run();
+                SystemRun(!MainController.NeedToLogin);
+            }
+        }
+
+        public static void SystemRun(bool runMenu)
+        {
+            if (runMenu)
+            {
+                MenuController = new MenuViewController(MainController);
+            }
+            HotKeys.Init(MainController);
+            MainController.Start();
+            Application.Run();
+        }
+
+        private static void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (loginForm.IsLoginAction)
+            {
+                MenuController = new MenuViewController(MainController);
+                ConfigForm configForm = new ConfigForm(MainController);
+                configForm.Show();
+            }
+            else
+            {
+                Application_ApplicationExit(sender, e);
             }
         }
 
