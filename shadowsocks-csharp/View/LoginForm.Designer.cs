@@ -35,6 +35,7 @@
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.methodList = new System.Windows.Forms.ComboBox();
+            this.RegButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +70,7 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(129, 225);
+            this.LoginButton.Location = new System.Drawing.Point(80, 219);
             this.LoginButton.Margin = new System.Windows.Forms.Padding(4);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(100, 29);
@@ -122,11 +123,23 @@
             this.methodList.Size = new System.Drawing.Size(132, 23);
             this.methodList.TabIndex = 6;
             // 
+            // RegButton
+            // 
+            this.RegButton.Location = new System.Drawing.Point(195, 219);
+            this.RegButton.Name = "RegButton";
+            this.RegButton.Size = new System.Drawing.Size(100, 29);
+            this.RegButton.TabIndex = 7;
+            this.RegButton.Text = "注 册";
+            this.RegButton.UseVisualStyleBackColor = true;
+            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(379, 328);
+            this.Controls.Add(this.RegButton);
             this.Controls.Add(this.methodList);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.txtPwd);
@@ -134,10 +147,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WuKongSS";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,5 +167,6 @@
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.ComboBox methodList;
+        private System.Windows.Forms.Button RegButton;
     }
 }

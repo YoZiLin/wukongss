@@ -50,48 +50,61 @@ namespace Shadowsocks.View
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string pwd = txtPwd.Text.Trim();
-            if (string.IsNullOrEmpty(pwd))
+            try
             {
-                MessageBox.Show("连接密码不能为空！", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                return;
-            }
-            int port = 0;
-            if (!int.TryParse(txtPort.Text.Trim(), out port) || port == 0)
-            {
-                MessageBox.Show("请正确填写端口号！", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                return;
-            }
-            LoginButton.Enabled = false;
-            string mgs = string.Empty;
-            var nodes = LoginHelp.LoginAction(pwd, port.ToString(), ref mgs);
-            if (nodes.Count > 0)
-            {
-                _modifiedConfiguration.userMetod = methodList.SelectedItem.ToString();
-                _modifiedConfiguration.userPort = port.ToString();
-                _modifiedConfiguration.userPassword = pwd;
-                _modifiedConfiguration.configs = new List<Server>();
-                foreach (var item in nodes)
+                string pwd = txtPwd.Text.Trim();
+                if (string.IsNullOrEmpty(pwd))
                 {
-                    Server server = new Server()
-                    {
-                        password = pwd,
-                        server_port = port,
-                        method = methodList.SelectedItem.ToString(),
-                        server = item.server,
-                        remarks = item.remark
-                    };
-                    _modifiedConfiguration.configs.Add(server);
+                    MessageBox.Show("连接密码不能为空！", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    return;
                 }
-                controller.SaveConfiguration(_modifiedConfiguration);
-                IsLoginAction = true;
-                this.Close();
+                int port = 0;
+                if (!int.TryParse(txtPort.Text.Trim(), out port) || port == 0)
+                {
+                    MessageBox.Show("请正确填写端口号！", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    return;
+                }
+                LoginButton.Enabled = false;
+                string mgs = string.Empty;
+                var nodes = LoginHelp.LoginAction(pwd, port.ToString(), ref mgs);
+                if (nodes.Count > 0)
+                {
+                    _modifiedConfiguration.userMetod = methodList.SelectedItem.ToString();
+                    _modifiedConfiguration.userPort = port.ToString();
+                    _modifiedConfiguration.userPassword = pwd;
+                    _modifiedConfiguration.configs = new List<Server>();
+                    foreach (var item in nodes)
+                    {
+                        Server server = new Server()
+                        {
+                            password = pwd,
+                            server_port = port,
+                            method = methodList.SelectedItem.ToString(),
+                            server = item.server,
+                            remarks = item.remark
+                        };
+                        _modifiedConfiguration.configs.Add(server);
+                    }
+                    controller.SaveConfiguration(_modifiedConfiguration);
+                    IsLoginAction = true;
+                    this.Close();
+                }
+                else
+                {
+                    LoginButton.Enabled = true;
+                    MessageBox.Show(mgs, "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception)
             {
-                LoginButton.Enabled = true;
-                MessageBox.Show(mgs, "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("系统异常，请联系管理员！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void RegButton_Click(object sender, EventArgs e)
+        {
+            RegForm regForm = new RegForm();
+            regForm.ShowDialog();
         }
     }
 }
