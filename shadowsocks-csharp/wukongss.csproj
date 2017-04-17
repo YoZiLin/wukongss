@@ -345,7 +345,6 @@
     <None Include="Resources\e.jpg" />
     <Content Include="Resources\ssIn24.png" />
     <Content Include="Resources\ssOut24.png" />
-    <Content Include="shadowsocks.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
