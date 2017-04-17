@@ -1,32 +1,23 @@
 ﻿using System;
-using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using Shadowsocks.Util;
 
 namespace Shadowsocks.Controller
 {
-    static class AutoStartup
+    class AutoStartup
     {
-        // Don't use Application.ExecutablePath
-        // see https://stackoverflow.com/questions/12945805/odd-c-sharp-path-issue
-        private static readonly string ExecutablePath = Assembly.GetEntryAssembly().Location;
-
-        private static string Key = "Shadowsocks_" + Application.StartupPath.GetHashCode();
+        static string Key = "Shadowsocks_" + Application.StartupPath.GetHashCode();
 
         public static bool Set(bool enabled)
         {
             RegistryKey runKey = null;
             try
             {
-                runKey = Utils.OpenRegKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-                if ( runKey == null ) {
-                    Logging.Error( @"Cannot find HKCU\Software\Microsoft\Windows\CurrentVersion\Run" );
-                    return false;
-                }
+                string path = Application.ExecutablePath;
+                runKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
                 if (enabled)
                 {
-                    runKey.SetValue(Key, ExecutablePath);
+                    runKey.SetValue(Key, path);
                 }
                 else
                 {
@@ -43,10 +34,8 @@ namespace Shadowsocks.Controller
             {
                 if (runKey != null)
                 {
-                    try {
-                        runKey.Close();
-                        runKey.Dispose();
-                    } catch (Exception e)
+                    try { runKey.Close(); }
+                    catch (Exception e)
                     { Logging.LogUsefulException(e); }
                 }
             }
@@ -57,11 +46,8 @@ namespace Shadowsocks.Controller
             RegistryKey runKey = null;
             try
             {
-                runKey = Utils.OpenRegKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
-                if (runKey == null) {
-                    Logging.Error(@"Cannot find HKCU\Software\Microsoft\Windows\CurrentVersion\Run");
-                    return false;
-                }
+                string path = Application.ExecutablePath;
+                runKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
                 string[] runList = runKey.GetValueNames();
                 foreach (string item in runList)
                 {
@@ -70,10 +56,10 @@ namespace Shadowsocks.Controller
                     else if (item.Equals("Shadowsocks", StringComparison.OrdinalIgnoreCase)) // Compatibility with older versions
                     {
                         string value = Convert.ToString(runKey.GetValue(item));
-                        if (ExecutablePath.Equals(value, StringComparison.OrdinalIgnoreCase))
+                        if (path.Equals(value, StringComparison.OrdinalIgnoreCase))
                         {
                             runKey.DeleteValue(item);
-                            runKey.SetValue(Key, ExecutablePath);
+                            runKey.SetValue(Key, path);
                             return true;
                         }
                     }
@@ -89,10 +75,8 @@ namespace Shadowsocks.Controller
             {
                 if (runKey != null)
                 {
-                    try {
-                        runKey.Close();
-                        runKey.Dispose();
-                    } catch (Exception e)
+                    try { runKey.Close(); }
+                    catch (Exception e)
                     { Logging.LogUsefulException(e); }
                 }
             }

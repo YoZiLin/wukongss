@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.IO.Compression;
-using System.Text;
 
 namespace Shadowsocks.Controller
 {
-    public static class FileManager
+    public class FileManager
     {
         public static bool ByteArrayToFile(string fileName, byte[] content)
         {
@@ -17,7 +16,8 @@ namespace Shadowsocks.Controller
             }
             catch (Exception ex)
             {
-                Logging.Error(ex);
+                Console.WriteLine("Exception caught in process: {0}",
+                                  ex.ToString());
             }
             return false;
         }
@@ -30,8 +30,9 @@ namespace Shadowsocks.Controller
             int n;
 
             using(var fs = File.Create(fileName))
-            using (var input = new GZipStream(new MemoryStream(content),
-                    CompressionMode.Decompress, false))
+            using (var input = new GZipStream(
+                new MemoryStream(content),
+                CompressionMode.Decompress, false))
             {
                 while ((n = input.Read(buffer, 0, buffer.Length)) > 0)
                 {
@@ -40,26 +41,5 @@ namespace Shadowsocks.Controller
             }
         }
 
-        public static string NonExclusiveReadAllText(string path)
-        {
-            return NonExclusiveReadAllText(path, Encoding.Default);
-        }
-
-        public static string NonExclusiveReadAllText(string path, Encoding encoding)
-        {
-            try
-            {
-                using (var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                using (var sr = new StreamReader(fs, encoding))
-                {
-                    return sr.ReadToEnd();
-                }
-            }
-            catch (Exception ex)
-            {
-                Logging.Error(ex);
-                throw ex;
-            }
-        }
     }
 }

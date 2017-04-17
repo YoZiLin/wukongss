@@ -71,42 +71,43 @@ namespace Shadowsocks.Properties {
         }
         
         /// <summary>
+        ///   查找类似 # translation for Simplified Chinese
+        ///
+        ///Shadowsocks=Shadowsocks
+        ///
+        ///# Menu items
+        ///
+        ///Enable System Proxy=启用系统代理
+        ///Mode=系统代理模式
+        ///PAC=PAC 模式
+        ///Global=全局模式
+        ///Servers=服务器
+        ///Edit Servers...=编辑服务器...
+        ///Statistics Config...=统计配置...
+        ///Start on Boot=开机启动
+        ///Allow Clients from LAN=允许来自局域网的连接
+        ///Local PAC=使用本地 PAC
+        ///Online PAC=使用在线 PAC
+        ///Edit Local PAC File...=编辑本地 PAC 文件...
+        ///Update Local PAC from GFWList=从 GFWList 更新本地 PAC
+        ///Edit User Rule for GFWList...=编辑 GFWList 的用户规则...
+        ///Show QRCode...=显示二维码...
+        ///Scan QRCode from Screen...=扫描屏幕上的二维码...
+        ///Availability S [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string cn {
+            get {
+                return ResourceManager.GetString("cn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap e {
             get {
                 object obj = ResourceManager.GetObject("e", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 # translation for Japanese
-        ///
-        ///Shadowsocks=Shadowsocks
-        ///
-        ///# Menu items
-        ///
-        ///Enable System Proxy=システムの代理を有効にする
-        ///Mode=モード
-        ///PAC=PAC
-        ///Global=全般
-        ///Servers=サーバ
-        ///Edit Servers...=サーバーを編集する...
-        ///Statistics Config...=統計情報の設定...
-        ///Start on Boot=システムと同時に起動
-        ///Forward Proxy...=代理を転送する...
-        ///Allow Clients from LAN=LANからのクライアントを許可する
-        ///Local PAC=ローカル PAC
-        ///Online PAC=オンライン PAC
-        ///Edit Local PAC File...=ローカル PAC ファイルを編集する...
-        ///Update Local PAC from GFWList=GFWList から、ローカル PACを更新する
-        ///Edit User Rule for GFWList...=利用者規則を編集する...
-        ///Secure Local [字符串的其余部分被截断]&quot;; 的本地化字符串。
-        /// </summary>
-        internal static string ja {
-            get {
-                return ResourceManager.GetString("ja", resourceCulture);
             }
         }
         
@@ -131,9 +132,7 @@ namespace Shadowsocks.Properties {
         }
         
         /// <summary>
-        ///   查找类似 listen-address __PRIVOXY_BIND_IP__:__PRIVOXY_BIND_PORT__
-        ///toggle 0
-        ///logfile ss_privoxy.log
+        ///   查找类似 listen-address __POLIPO_BIND_IP__:__POLIPO_BIND_PORT__
         ///show-on-task-bar 0
         ///activity-animation 0
         ///forward-socks5 / 127.0.0.1:__SOCKS_PORT__ .
@@ -199,50 +198,10 @@ namespace Shadowsocks.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap ssIn24 {
-            get {
-                object obj = ResourceManager.GetObject("ssIn24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap ssOut24 {
-            get {
-                object obj = ResourceManager.GetObject("ssOut24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         internal static System.Drawing.Bitmap ssw128 {
             get {
                 object obj = ResourceManager.GetObject("ssw128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Byte[] 类型的本地化资源。
-        /// </summary>
-        internal static byte[] sysproxy_exe {
-            get {
-                object obj = ResourceManager.GetObject("sysproxy_exe", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Byte[] 类型的本地化资源。
-        /// </summary>
-        internal static byte[] sysproxy64_exe {
-            get {
-                object obj = ResourceManager.GetObject("sysproxy64_exe", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         
@@ -254,67 +213,6 @@ namespace Shadowsocks.Properties {
         internal static string user_rule {
             get {
                 return ResourceManager.GetString("user_rule", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 # translation for Simplified Chinese
-        ///
-        ///Shadowsocks=Shadowsocks
-        ///
-        ///# Menu items
-        ///
-        ///Enable System Proxy=启用系统代理
-        ///Mode=系统代理模式
-        ///PAC=PAC 模式
-        ///Global=全局模式
-        ///Servers=服务器
-        ///Edit Servers...=编辑服务器...
-        ///Statistics Config...=统计配置...
-        ///Start on Boot=开机启动
-        ///Forward Proxy...=正向代理设置...
-        ///Allow Clients from LAN=允许来自局域网的连接
-        ///Local PAC=使用本地 PAC
-        ///Online PAC=使用在线 PAC
-        ///Edit Local PAC File...=编辑本地 PAC 文件...
-        ///Update Local PAC from GFWList=从 GFWList 更新本地 PAC
-        ///Edit User Rule for GFWList...=编辑 GFWList 的用户规则...
-        ///Secure Local PAC=保护本地 PAC
-        ///Cop [字符串的其余部分被截断]&quot;; 的本地化字符串。
-        /// </summary>
-        internal static string zh_CN {
-            get {
-                return ResourceManager.GetString("zh_CN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 # translation for Traditional Chinese
-        ///
-        ///Shadowsocks=Shadowsocks
-        ///
-        ///# Menu items
-        ///
-        ///Enable System Proxy=啟用系統代理
-        ///Mode=系統代理模式
-        ///PAC=PAC 模式
-        ///Global=全局模式
-        ///Servers=伺服器
-        ///Edit Servers...=編輯伺服器...
-        ///Statistics Config...=統計設定檔...
-        ///Start on Boot=開機啟動
-        ///Forward Proxy...=正向 Proxy 設定...
-        ///Allow Clients from LAN=允許來自區域網路的連線
-        ///Local PAC=使用本機 PAC
-        ///Online PAC=使用線上 PAC
-        ///Edit Local PAC File...=編輯本機 PAC 檔案...
-        ///Update Local PAC from GFWList=從 GFWList 更新本機 PAC
-        ///Edit User Rule for GFWList...=編輯 GFWList 的使用者規則...
-        ///Secure Local PAC=安全本機 [字符串的其余部分被截断]&quot;; 的本地化字符串。
-        /// </summary>
-        internal static string zh_TW {
-            get {
-                return ResourceManager.GetString("zh_TW", resourceCulture);
             }
         }
     }

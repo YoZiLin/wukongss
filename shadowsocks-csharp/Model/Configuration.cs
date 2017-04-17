@@ -22,14 +22,9 @@ namespace Shadowsocks.Model
         public int localPort;
         public string pacUrl;
         public bool useOnlinePac;
-        public bool secureLocalPac = true;
         public bool availabilityStatistics;
         public bool autoCheckUpdate;
-        public bool checkPreRelease;
-        public bool isVerboseLogging;
         public LogViewerConfig logViewer;
-        public ProxyConfig proxy;
-        public HotkeyConfig hotkey;
         public string userPassword;
         public string userPort;
         public string userMetod;
@@ -49,7 +44,6 @@ namespace Shadowsocks.Model
             CheckPort(server.server_port);
             CheckPassword(server.password);
             CheckServer(server.server);
-            CheckTimeout(server.timeout, Server.MaxServerTimeoutSec);
         }
 
         public static Configuration Load()
@@ -59,24 +53,10 @@ namespace Shadowsocks.Model
                 string configContent = File.ReadAllText(CONFIG_FILE);
                 Configuration config = JsonConvert.DeserializeObject<Configuration>(configContent);
                 config.isDefault = false;
-
-                if (config.configs == null)
-                    config.configs = new List<Server>();
-                if (config.configs.Count == 0)
-                    config.configs.Add(GetDefaultServer());
                 if (config.localPort == 0)
                     config.localPort = 1080;
                 if (config.index == -1 && config.strategy == null)
                     config.index = 0;
-                if (config.logViewer == null)
-                    config.logViewer = new LogViewerConfig();
-                if (config.proxy == null)
-                    config.proxy = new ProxyConfig();
-                if (config.hotkey == null)
-                    config.hotkey = new HotkeyConfig();
-
-                config.proxy.CheckConfig();
-
                 return config;
             }
             catch (Exception e)
@@ -117,7 +97,7 @@ namespace Shadowsocks.Model
             }
             catch (IOException e)
             {
-                Logging.LogUsefulException(e);
+                Console.Error.WriteLine(e);
             }
         }
 
@@ -151,17 +131,10 @@ namespace Shadowsocks.Model
                 throw new ArgumentException(I18N.GetString("Password can not be blank"));
         }
 
-        public static void CheckServer(string server)
+        private static void CheckServer(string server)
         {
             if (server.IsNullOrEmpty())
                 throw new ArgumentException(I18N.GetString("Server IP can not be blank"));
-        }
-
-        public static void CheckTimeout(int timeout, int maxTimeout)
-        {
-            if (timeout <= 0 || timeout > maxTimeout)
-                throw new ArgumentException(string.Format(
-                    I18N.GetString("Timeout is invalid, it should not exceed {0}"), maxTimeout));
         }
     }
 }

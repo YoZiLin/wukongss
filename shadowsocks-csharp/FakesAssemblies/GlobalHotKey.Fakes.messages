@@ -1,2 +1,0 @@
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\GlobalHotKey01.fakes : warning : 无法为 GlobalHotKey.Internal.WinApi 生成存根: 类型对 exported or assembly(GlobalHotKey.Fakes) 不可见。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\GlobalHotKey01.fakes : warning : 无法为 GlobalHotKey.Internal.WinApi 生成填充码: 类型对 exported or assembly(GlobalHotKey.Fakes) 不可见。

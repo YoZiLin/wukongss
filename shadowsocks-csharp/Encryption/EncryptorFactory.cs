@@ -1,38 +1,29 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Shadowsocks.Encryption.AEAD;
-using Shadowsocks.Encryption.Stream;
-
 namespace Shadowsocks.Encryption
 {
     public static class EncryptorFactory
     {
-        private static Dictionary<string, Type> _registeredEncryptors = new Dictionary<string, Type>();
+        private static Dictionary<string, Type> _registeredEncryptors;
 
-        private static readonly Type[] ConstructorTypes = {typeof(string), typeof(string)};
+        private static Type[] _constructorTypes = new Type[] { typeof(string), typeof(string), typeof(bool), typeof(bool) };
 
         static EncryptorFactory()
         {
-            foreach (string method in StreamMbedTLSEncryptor.SupportedCiphers())
+            _registeredEncryptors = new Dictionary<string, Type>();
+            foreach (string method in PolarSSLEncryptor.SupportedCiphers())
             {
-                _registeredEncryptors.Add(method, typeof(StreamMbedTLSEncryptor));
+                _registeredEncryptors.Add(method, typeof(PolarSSLEncryptor));
             }
-            foreach (string method in StreamSodiumEncryptor.SupportedCiphers())
+            foreach (string method in SodiumEncryptor.SupportedCiphers())
             {
-                _registeredEncryptors.Add(method, typeof(StreamSodiumEncryptor));
-            }
-            foreach (string method in AEADMbedTLSEncryptor.SupportedCiphers())
-            {
-                _registeredEncryptors.Add(method, typeof(AEADMbedTLSEncryptor));
-            }
-            foreach (string method in AEADSodiumEncryptor.SupportedCiphers())
-            {
-                _registeredEncryptors.Add(method, typeof(AEADSodiumEncryptor));
+                _registeredEncryptors.Add(method, typeof(SodiumEncryptor));
             }
         }
 
-        public static IEncryptor GetEncryptor(string method, string password)
+        public static IEncryptor GetEncryptor(string method, string password, bool onetimeauth, bool isudp)
         {
             if (method.IsNullOrEmpty())
             {
@@ -40,9 +31,8 @@ namespace Shadowsocks.Encryption
             }
             method = method.ToLowerInvariant();
             Type t = _registeredEncryptors[method];
-            ConstructorInfo c = t.GetConstructor(ConstructorTypes);
-            if (c == null) throw new System.Exception("Invalid ctor");
-            IEncryptor result = (IEncryptor) c.Invoke(new object[] {method, password});
+            ConstructorInfo c = t.GetConstructor(_constructorTypes);
+            IEncryptor result = (IEncryptor)c.Invoke(new object[] { method, password, onetimeauth, isudp });
             return result;
         }
     }

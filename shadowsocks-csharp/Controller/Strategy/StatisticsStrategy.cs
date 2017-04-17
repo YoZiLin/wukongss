@@ -26,8 +26,17 @@ namespace Shadowsocks.Controller.Strategy
         {
             _controller = controller;
             var servers = controller.GetCurrentConfiguration().configs;
-            var randomIndex = new Random().Next() % servers.Count;
-            _currentServer = servers[randomIndex];  //choose a server randomly at first
+            var randomIndex = 0;
+            try
+            {
+                randomIndex = new Random().Next() % servers.Count;
+                _currentServer = servers[randomIndex];  //choose a server randomly at first
+            }
+            catch (Exception)
+            {
+                randomIndex = 0;
+                _currentServer = new Server();
+            }
             _timer = new Timer(ReloadStatisticsAndChooseAServer);
         }
 
@@ -127,7 +136,7 @@ namespace Shadowsocks.Controller.Strategy
 
         public string Name => I18N.GetString("Choose by statistics");
 
-        public Server GetAServer(IStrategyCallerType type, IPEndPoint localIPEndPoint, EndPoint destEndPoint)
+        public Server GetAServer(IStrategyCallerType type, IPEndPoint localIPEndPoint)
         {
             if (_currentServer == null)
             {

@@ -1,8 +1,0 @@
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 <>f__AnonymousType0`2 生成存根: 类型已密封。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 <>f__AnonymousType1`2 生成存根: 类型已密封。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 ZXing.Rendering.GeometryRenderer+<>c__DisplayClass12 生成填充码: 类型不受支持，因为存在内部限制。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 ZXing.Rendering.GeometryRenderer+<>c__DisplayClasse 生成填充码: 类型不受支持，因为存在内部限制。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 ZXing.Rendering.GeometryRenderer+Coordinate 生成填充码: 类型对 exported or assembly(zxing.presentation.Fakes) 不可见。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 ZXing.Rendering.GeometryRenderer+Edge 生成填充码: 类型对 exported or assembly(zxing.presentation.Fakes) 不可见。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 <>f__AnonymousType0`2 生成填充码: 类型不受支持，因为存在内部限制。
-F:\demo\shadowsocks-windows-master\shadowsocks-csharp\Fakes\zxing.presentation.fakes : warning : 无法为 <>f__AnonymousType1`2 生成填充码: 类型不受支持，因为存在内部限制。

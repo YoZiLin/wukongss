@@ -1,4 +1,5 @@
 ﻿using Shadowsocks.Controller;
+using Shadowsocks.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,9 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Shadowsocks.Model;
 
 namespace Shadowsocks.View
 {
@@ -17,13 +16,11 @@ namespace Shadowsocks.View
         private ShadowsocksController controller;
         private Configuration _modifiedConfiguration;
         public bool IsLoginAction = false;
+
         public LoginForm(ShadowsocksController controller, bool isCanelUse = false)
         {
-            this.Dock = DockStyle.Fill;
-            this.StartPosition = FormStartPosition.CenterParent;
-            this.controller = controller;
             InitializeComponent();
-
+            this.controller = controller;
             _modifiedConfiguration = controller.GetConfigurationCopy();
 
             if (isCanelUse)
@@ -48,7 +45,7 @@ namespace Shadowsocks.View
             }
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             try
             {
@@ -98,13 +95,14 @@ namespace Shadowsocks.View
             catch (Exception ex)
             {
                 Logging.Error(ex);
+                LoginButton.Enabled = true;
                 MessageBox.Show("系统异常，请联系管理员！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void RegButton_Click(object sender, EventArgs e)
         {
-            RegForm regForm = new RegForm();
+            RegisterForm regForm = new RegisterForm();
             regForm.ShowDialog();
         }
     }

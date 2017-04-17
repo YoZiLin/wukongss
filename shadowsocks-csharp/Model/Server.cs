@@ -1,8 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Web;
+
 using Shadowsocks.Controller;
 
 namespace Shadowsocks.Model
@@ -10,19 +9,12 @@ namespace Shadowsocks.Model
     [Serializable]
     public class Server
     {
-        public static readonly Regex
-            UrlFinder = new Regex(@"ss://(?<base64>[A-Za-z0-9+-/=_]+)(?:#(?<tag>\S+))?", RegexOptions.IgnoreCase),
-            DetailsParser = new Regex(@"^((?<method>.+?):(?<password>.*)@(?<hostname>.+?):(?<port>\d+?))$", RegexOptions.IgnoreCase);
-
-        private const int DefaultServerTimeoutSec = 5;
-        public const int MaxServerTimeoutSec = 20;
-
         public string server;
         public int server_port;
         public string password;
         public string method;
         public string remarks;
-        public int timeout;
+        public bool auth;
 
         public override int GetHashCode()
         {
@@ -41,23 +33,14 @@ namespace Shadowsocks.Model
             {
                 return I18N.GetString("New server");
             }
-            string serverStr;
-            // CheckHostName() won't do a real DNS lookup
-            var hostType = Uri.CheckHostName(server);
-
-            switch (hostType)
+            if (remarks.IsNullOrEmpty())
             {
-                case UriHostNameType.IPv6:
-                    serverStr = $"[{server}]:{server_port}";
-                    break;
-                default:
-                    // IPv4 and domain name
-                    serverStr = $"{server}:{server_port}";
-                    break;
+                return server + ":" + server_port;
             }
-            return remarks.IsNullOrEmpty()
-                ? serverStr
-                : $"{remarks} ({serverStr})";
+            else
+            {
+                return remarks + " (" + server + ":" + server_port + ")";
+            }
         }
 
         public Server()
@@ -67,35 +50,50 @@ namespace Shadowsocks.Model
             method = "aes-256-cfb";
             password = "";
             remarks = "";
-            timeout = DefaultServerTimeoutSec;
+            auth = false;
         }
 
-        public static List<Server> GetServers(string ssURL)
+        public Server(string ssURL) : this()
         {
-            var matches = UrlFinder.Matches(ssURL);
-            if (matches.Count <= 0) return null;
-            List<Server> servers = new List<Server>();
-            foreach (Match match in matches)
+            string[] r1 = Regex.Split(ssURL, "ss://", RegexOptions.IgnoreCase);
+            string base64 = r1[1].ToString();
+            byte[] bytes = null;
+            for (var i = 0; i < 3; i++)
             {
-                Server tmp = new Server();
-                var base64 = match.Groups["base64"].Value;
-                var tag = match.Groups["tag"].Value;
-                if (!tag.IsNullOrEmpty())
+                try
                 {
-                    tmp.remarks = HttpUtility.UrlDecode(tag, Encoding.UTF8);
+                    bytes = Convert.FromBase64String(base64);
                 }
-                Match details = DetailsParser.Match(Encoding.UTF8.GetString(Convert.FromBase64String(
-                    base64.PadRight(base64.Length + (4 - base64.Length % 4) % 4, '='))));
-                if (!details.Success)
-                    continue;
-                tmp.method = details.Groups["method"].Value;
-                tmp.password = details.Groups["password"].Value;
-                tmp.server = details.Groups["hostname"].Value;
-                tmp.server_port = int.Parse(details.Groups["port"].Value);
-
-                servers.Add(tmp);
+                catch (FormatException)
+                {
+                    base64 += "=";
+                }
             }
-            return servers;
+            if (bytes == null)
+            {
+                throw new FormatException();
+            }
+            try
+            {
+                string data = Encoding.UTF8.GetString(bytes);
+                int indexLastAt = data.LastIndexOf('@');
+
+                string afterAt = data.Substring(indexLastAt + 1);
+                int indexLastColon = afterAt.LastIndexOf(':');
+                server_port = int.Parse(afterAt.Substring(indexLastColon + 1));
+                server = afterAt.Substring(0, indexLastColon);
+
+                string beforeAt = data.Substring(0, indexLastAt);
+                string[] parts = beforeAt.Split(new[] { ':' });
+                method = parts[0];
+                password = parts[1];
+
+                //TODO: read one_time_auth
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new FormatException();
+            }
         }
 
         public string Identifier()
