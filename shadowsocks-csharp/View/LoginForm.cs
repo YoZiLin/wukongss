@@ -95,8 +95,9 @@ namespace Shadowsocks.View
                     MessageBox.Show(mgs, "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Logging.Error(ex);
                 MessageBox.Show("系统异常，请联系管理员！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
