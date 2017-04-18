@@ -14,7 +14,7 @@ namespace Shadowsocks.Model
     public class LoginHelp
     {
 
-        public static List<NodesInfo> LoginAction(string password, string port, ref string message)
+        public static List<NodesInfo> LoginAction(string password, string port, ref string message,ref string encryption)
         {
             string loginApiUrl = "https://www.wukongss.com/api/applogin.json";
 
@@ -30,6 +30,7 @@ namespace Shadowsocks.Model
                 switch (userInfo.code)
                 {
                     case "8000":
+                        encryption = userInfo.data.encryption;
                         DateTime timeStamp = new DateTime(1970, 1, 1);
                         long a = (DateTime.UtcNow.Ticks - timeStamp.Ticks) / 10000000;
                         string nodesUrl = "https://www.wukongss.com/api/nodes.json";

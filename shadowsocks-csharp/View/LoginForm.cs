@@ -27,8 +27,6 @@ namespace Shadowsocks.View
             {
                 this.FormClosed += LoginForm_FormClosed;
             }
-
-            methodList.SelectedIndex = 0;
         }
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -49,24 +47,25 @@ namespace Shadowsocks.View
         {
             try
             {
-                string pwd = txtPwd.Text.Trim();
-                if (string.IsNullOrEmpty(pwd))
-                {
-                    MessageBox.Show("连接密码不能为空！", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                    return;
-                }
                 int port = 0;
                 if (!int.TryParse(txtPort.Text.Trim(), out port) || port == 0)
                 {
                     MessageBox.Show("请正确填写端口号！", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     return;
                 }
+                string pwd = txtPwd.Text.Trim();
+                if (string.IsNullOrEmpty(pwd))
+                {
+                    MessageBox.Show("连接密码不能为空！", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    return;
+                }
                 LoginButton.Enabled = false;
                 string mgs = string.Empty;
-                var nodes = LoginHelp.LoginAction(pwd, port.ToString(), ref mgs);
+                string encryption = string.Empty;
+                var nodes = LoginHelp.LoginAction(pwd, port.ToString(), ref mgs, ref encryption);
                 if (nodes.Count > 0)
                 {
-                    _modifiedConfiguration.userMetod = methodList.SelectedItem.ToString();
+                    _modifiedConfiguration.userMetod = encryption;
                     _modifiedConfiguration.userPort = port.ToString();
                     _modifiedConfiguration.userPassword = pwd;
                     _modifiedConfiguration.configs = new List<Server>();
@@ -76,9 +75,9 @@ namespace Shadowsocks.View
                         {
                             password = pwd,
                             server_port = port,
-                            method = methodList.SelectedItem.ToString(),
+                            method = encryption,
                             server = item.server,
-                            remarks = item.remark
+                            remarks = item.name
                         };
                         _modifiedConfiguration.configs.Add(server);
                     }

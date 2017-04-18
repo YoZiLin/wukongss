@@ -230,6 +230,8 @@ namespace Shadowsocks.View
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            _modifiedConfiguration.index = ServersListBox.SelectedIndex;
+            controller.SaveConfiguration(_modifiedConfiguration);
             Server server = controller.GetCurrentServer();
             if (!SaveOldSelectedServer())
             {
