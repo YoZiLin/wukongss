@@ -150,6 +150,8 @@ namespace Shadowsocks
 
         private static void Application_ApplicationExit(object sender, EventArgs e)
         {
+            MenuController._notifyIcon.Visible = false;
+            MenuController._notifyIcon.Dispose();
             if (Controller != null)
             {
                 Controller.Stop();

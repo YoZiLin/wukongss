@@ -103,7 +103,8 @@ namespace Shadowsocks.Model
         public static string GetUserPlan(string plan)
         {
             string str = string.Empty;
-            switch (plan.ToLower())
+            string caseStr = plan.ToUpper().Trim();
+            switch (caseStr)
             {
                 case "A":
                      str = "正式用户";
@@ -124,7 +125,7 @@ namespace Shadowsocks.Model
                     str = "周卡";
                     break;
                 case "P":
-                    str = "周卡";
+                    str = "月卡";
                     break;
                 case "Q":
                     str = "季卡";
@@ -134,8 +135,6 @@ namespace Shadowsocks.Model
                     break;
                 case "G":
                     str = "游戏专线";
-                    break;
-                default:
                     break;
             }
             return str;

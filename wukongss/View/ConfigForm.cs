@@ -127,7 +127,7 @@ namespace Shadowsocks.View
             ServersListBox.Items.Clear();
             foreach (Server server in _modifiedConfiguration.configs)
             {
-                ServersListBox.Items.Add(server.FriendlyName());
+                ServersListBox.Items.Add(server.remarks);
             }
         }
 
@@ -152,11 +152,15 @@ namespace Shadowsocks.View
             {
                 UserInfo userInfo = _modifiedConfiguration.userInfo;
                 rbUser.AppendText("我的套餐：\r\n");
-                rbUser.AppendText(string.Format(@"等级：{0} \r\n ", LoginHelp.GetUserPlan(userInfo.plan)));
-                rbUser.AppendText(string.Format(@"到期时间：{0} \r\n ", GetTime(userInfo.expire_time).ToString("yyyy-MM-dd HH:mm:ss")));
-                rbUser.AppendText(string.Format(@"流量使用情况：{0}/{1} \r\n ", userInfo.flow_down, userInfo.transfer));
-                rbUser.AppendText(string.Format(@"剩余流量：{0} \r\n ", userInfo.flow_left));
-                rbUser.AppendText(string.Format(@"状态：{0} \r\n ", LoginHelp.GetUserStatus(userInfo.status)));
+                rbUser.AppendText(string.Format(@"等级：{0} ", LoginHelp.GetUserPlan(userInfo.plan)));
+                rbUser.AppendText("\r\n");
+                rbUser.AppendText(string.Format(@"到期时间：{0} ", GetTime(userInfo.expire_time).ToString("yyyy-MM-dd HH:mm:ss")));
+                rbUser.AppendText("\r\n");
+                rbUser.AppendText(string.Format(@"流量使用情况：{0}/{1} ", userInfo.flow_down, userInfo.transfer));
+                rbUser.AppendText("\r\n");
+                rbUser.AppendText(string.Format(@"剩余流量：{0} ", userInfo.flow_left));
+                rbUser.AppendText("\r\n");
+                rbUser.AppendText(string.Format(@"状态：{0}", LoginHelp.GetUserStatus(userInfo.status)));
             }
             catch (Exception ex)
             {
@@ -218,7 +222,7 @@ namespace Shadowsocks.View
             }
             if (_lastSelectedIndex >= 0)
             {
-                ServersListBox.Items[_lastSelectedIndex] = _modifiedConfiguration.configs[_lastSelectedIndex].FriendlyName();
+                ServersListBox.Items[_lastSelectedIndex] = _modifiedConfiguration.configs[_lastSelectedIndex].remarks;
             }
             UpdateMoveUpAndDownButton();
             LoadSelectedServer();
