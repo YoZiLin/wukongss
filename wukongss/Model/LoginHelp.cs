@@ -14,7 +14,7 @@ namespace Shadowsocks.Model
     public class LoginHelp
     {
 
-        public static List<NodesInfo> LoginAction(string password, string port, ref string message,ref string encryption)
+        public static List<NodesInfo> LoginAction(string password, string port, ref string message,ref UserInfo userModel)
         {
             string loginApiUrl = "https://www.wukongss.com/api/applogin.json";
 
@@ -30,7 +30,7 @@ namespace Shadowsocks.Model
                 switch (userInfo.code)
                 {
                     case "8000":
-                        encryption = userInfo.data.encryption;
+                        userModel = userInfo.data;
                         DateTime timeStamp = new DateTime(1970, 1, 1);
                         long a = (DateTime.UtcNow.Ticks - timeStamp.Ticks) / 10000000;
                         string nodesUrl = "https://www.wukongss.com/api/nodes.json";
@@ -97,6 +97,58 @@ namespace Shadowsocks.Model
             public string flow_left { get; set; }
             public string encryption { get; set; }
             public string expire_time { get; set; }
+            public int status { get; set; }
+        }
+
+        public static string GetUserPlan(string plan)
+        {
+            string str = string.Empty;
+            switch (plan.ToLower())
+            {
+                case "A":
+                     str = "正式用户";
+                    break;
+                case "B":
+                    str = "普通用户";
+                    break;
+                case "C":
+                    str = "高级用户";
+                    break;
+                case "D":
+                    str = "超级用户";
+                    break;
+                case "VIP":
+                    str = "特权用户";
+                    break;
+                case "O":
+                    str = "周卡";
+                    break;
+                case "P":
+                    str = "周卡";
+                    break;
+                case "Q":
+                    str = "季卡";
+                    break;
+                case "R":
+                    str = "年卡";
+                    break;
+                case "G":
+                    str = "游戏专线";
+                    break;
+                default:
+                    break;
+            }
+            return str;
+        }
+
+        public static string GetUserStatus(int status)
+        {
+            string str = "正常使用";
+            if (status!=1)
+            {
+                str = "暂停使用";
+            }
+            return str;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.IO;
 
 using Shadowsocks.Controller;
 using Newtonsoft.Json;
+using static Shadowsocks.Model.LoginHelp;
 
 namespace Shadowsocks.Model
 {
@@ -31,6 +32,7 @@ namespace Shadowsocks.Model
         public string userPassword;
         public string userPort;
         public string userMetod;
+        public UserInfo userInfo;
 
         private static string CONFIG_FILE = "gui-config.json";
 

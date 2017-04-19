@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static Shadowsocks.Model.LoginHelp;
 
 namespace Shadowsocks.View
 {
@@ -61,11 +62,12 @@ namespace Shadowsocks.View
                 }
                 LoginButton.Enabled = false;
                 string mgs = string.Empty;
-                string encryption = string.Empty;
-                var nodes = LoginHelp.LoginAction(pwd, port.ToString(), ref mgs, ref encryption);
+                UserInfo userInfo = new UserInfo();
+                var nodes = LoginHelp.LoginAction(pwd, port.ToString(), ref mgs, ref userInfo);
                 if (nodes.Count > 0)
                 {
-                    _modifiedConfiguration.userMetod = encryption;
+                    _modifiedConfiguration.userMetod = userInfo.encryption;
+                    _modifiedConfiguration.userInfo = userInfo;
                     _modifiedConfiguration.userPort = port.ToString();
                     _modifiedConfiguration.userPassword = pwd;
                     _modifiedConfiguration.configs = new List<Server>();
@@ -75,7 +77,7 @@ namespace Shadowsocks.View
                         {
                             password = pwd,
                             server_port = port,
-                            method = encryption,
+                            method = userInfo.encryption,
                             server = item.server,
                             remarks = item.name
                         };

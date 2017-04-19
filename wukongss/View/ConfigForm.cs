@@ -9,6 +9,7 @@ using Microsoft.Win32;
 using Shadowsocks.Controller;
 using Shadowsocks.Model;
 using Shadowsocks.Properties;
+using static Shadowsocks.Model.LoginHelp;
 
 namespace Shadowsocks.View
 {
@@ -142,6 +143,33 @@ namespace Shadowsocks.View
             ServersListBox.SelectedIndex = _lastSelectedIndex;
             UpdateMoveUpAndDownButton();
             LoadSelectedServer();
+            LoadUserMessage();
+        }
+
+        private void LoadUserMessage()
+        {
+            try
+            {
+                UserInfo userInfo = _modifiedConfiguration.userInfo;
+                rbUser.AppendText("我的套餐：\r\n");
+                rbUser.AppendText(string.Format(@"等级：{0} \r\n ", LoginHelp.GetUserPlan(userInfo.plan)));
+                rbUser.AppendText(string.Format(@"到期时间：{0} \r\n ", GetTime(userInfo.expire_time).ToString("yyyy-MM-dd HH:mm:ss")));
+                rbUser.AppendText(string.Format(@"流量使用情况：{0}/{1} \r\n ", userInfo.flow_down, userInfo.transfer));
+                rbUser.AppendText(string.Format(@"剩余流量：{0} \r\n ", userInfo.flow_left));
+                rbUser.AppendText(string.Format(@"状态：{0} \r\n ", LoginHelp.GetUserStatus(userInfo.status)));
+            }
+            catch (Exception ex)
+            {
+                Logging.Error(ex);
+                throw;
+            }
+        }
+
+        private DateTime GetTime(string timeStamp)
+        {
+            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            long lTime = long.Parse(timeStamp + "0000000");
+            TimeSpan toNow = new TimeSpan(lTime); return dtStart.Add(toNow);
         }
 
         private void ConfigForm_Load(object sender, EventArgs e)

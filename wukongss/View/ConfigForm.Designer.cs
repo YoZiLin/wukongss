@@ -59,6 +59,7 @@
             this.BtnOK = new System.Windows.Forms.Button();
             this.BtnCanel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.rbUser = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel4.SuspendLayout();
             this.ServerGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -157,7 +158,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 21);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -310,9 +311,9 @@
             this.ServersListBox.ItemHeight = 12;
             this.ServersListBox.Location = new System.Drawing.Point(12, 12);
             this.ServersListBox.Margin = new System.Windows.Forms.Padding(0);
-            this.ServersListBox.MaximumSize = new System.Drawing.Size(284, 307);
+            this.ServersListBox.MaximumSize = new System.Drawing.Size(284, 175);
             this.ServersListBox.Name = "ServersListBox";
-            this.ServersListBox.Size = new System.Drawing.Size(284, 307);
+            this.ServersListBox.Size = new System.Drawing.Size(284, 175);
             this.ServersListBox.TabIndex = 7;
             this.ServersListBox.SelectedIndexChanged += new System.EventHandler(this.ServersListBox_SelectedIndexChanged);
             // 
@@ -377,13 +378,13 @@
             this.tableLayoutPanel5.Location = new System.Drawing.Point(287, 200);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(3);
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(196, 33);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
@@ -477,11 +478,10 @@
             // 
             // BtnOK
             // 
-            this.BtnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.BtnOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnOK.Location = new System.Drawing.Point(12, 334);
-            this.BtnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnOK.Location = new System.Drawing.Point(12, 204);
+            this.BtnOK.Margin = new System.Windows.Forms.Padding(2);
             this.BtnOK.Name = "BtnOK";
             this.BtnOK.Size = new System.Drawing.Size(76, 32);
             this.BtnOK.TabIndex = 8;
@@ -491,11 +491,10 @@
             // 
             // BtnCanel
             // 
-            this.BtnCanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.BtnCanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCanel.Location = new System.Drawing.Point(219, 334);
-            this.BtnCanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCanel.Location = new System.Drawing.Point(219, 204);
+            this.BtnCanel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCanel.Name = "BtnCanel";
             this.BtnCanel.Size = new System.Drawing.Size(76, 32);
             this.BtnCanel.TabIndex = 9;
@@ -507,12 +506,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 386);
+            this.label1.Location = new System.Drawing.Point(12, 256);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 12);
             this.label1.TabIndex = 10;
             this.label1.Text = "选择你需要的节点，点击确定即可使用！(＾－＾)V";
+            // 
+            // rbUser
+            // 
+            this.rbUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbUser.Location = new System.Drawing.Point(12, 289);
+            this.rbUser.Name = "rbUser";
+            this.rbUser.ReadOnly = true;
+            this.rbUser.Size = new System.Drawing.Size(284, 153);
+            this.rbUser.TabIndex = 11;
+            this.rbUser.Text = "";
             // 
             // ConfigForm
             // 
@@ -522,7 +532,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.MyCancelButton;
-            this.ClientSize = new System.Drawing.Size(307, 415);
+            this.ClientSize = new System.Drawing.Size(307, 453);
+            this.Controls.Add(this.rbUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCanel);
             this.Controls.Add(this.BtnOK);
@@ -587,6 +598,7 @@
         private System.Windows.Forms.Button BtnOK;
         private System.Windows.Forms.Button BtnCanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox rbUser;
     }
 }
 
