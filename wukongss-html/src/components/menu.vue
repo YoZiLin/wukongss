@@ -25,7 +25,7 @@
 <style lang="scss">
     .menu{
         position: absolute;
-        color:#000;
+        color:#fff;
         z-index: 100;
         width: 100%;
         display: flex;
@@ -51,7 +51,7 @@
 
         a{
             cursor: pointer;
-            color: #000;
+            color:#fff;
             font-size: 20px;
         }
     }

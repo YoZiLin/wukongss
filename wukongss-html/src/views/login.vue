@@ -7,6 +7,10 @@
             <div class="descript">
                 国内最好用的科学上网工具
             </div>
+            <div>
+                <mu-text-field label="请输入端口号" class='block' labelClass='white-word'   v-model="port" labelFloat/>
+                <mu-text-field class="block" label="请输入密码" labelClass='white-word'    type='password' v-model="pwd" labelFloat/>
+            </div>
             <div class="login-btn">
                 <mu-raised-button label="登录" class="demo-raised-button"/>
                 &nbsp;
@@ -21,7 +25,8 @@ import hdmenu from '@/components/menu.vue'
         name:'login',
         data () {
             return {
-                
+                port:'',
+                pwd:''
             }
         },
         components:{
@@ -31,9 +36,6 @@ import hdmenu from '@/components/menu.vue'
             regAction(){
                 this.$router.push('/register');
             }
-        },
-        created () {
-            console.log('123')
         }
     }
 </script>
@@ -70,7 +72,16 @@ import hdmenu from '@/components/menu.vue'
         .descript{
             text-align: center;
             color:#fff;
-            font-size: 20px
+            font-size: 20px;
+        }
+
+        .block{
+            display: block;
+            margin: 0 auto;
+        }
+
+        .white-word{
+            color:#fff;
         }
     }
     .main>div{
