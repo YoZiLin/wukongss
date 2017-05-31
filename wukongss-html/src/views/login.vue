@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <hdmenu></hdmenu>
-        <div class='main'>
+        <div class='content'>
+            <hdmenu></hdmenu>
             <div class="logo">W</div>
             <div class="title">悟空加速</div>
             <div class="descript">
@@ -12,15 +11,14 @@
                 <mu-text-field class="block" label="请输入密码" labelClass='white-word'    type='password' v-model="pwd" labelFloat/>
             </div>
             <div class="login-btn">
-                <mu-raised-button label="登录" class="demo-raised-button"/>
+                <mu-raised-button label="登录" class="demo-raised-button" @click='login();'/>
                 &nbsp;
                 <mu-raised-button label="注册" class="demo-raised-button" @click='regAction();' secondary/>
             </div>
         </div>
-    </div>
 </template>
 <script>
-import hdmenu from '@/components/menu.vue'
+    import hdmenu from '@/components/menu.vue';
     export default {
         name:'login',
         data () {
@@ -35,17 +33,21 @@ import hdmenu from '@/components/menu.vue'
         methods:{
             regAction(){
                 this.$router.push('/register');
+            },
+            login(){
+                this.api.showMessage('hello world');
             }
         }
     }
 </script>
 <style lang="scss">
-    .main{
+    .content{
         padding-top: 50px;
         padding-bottom: 50px;
         position: absolute;
         height: 100%;
         width: 100%;
+        background-color: #f39943;
 
         .logo{
             margin: 0 auto;

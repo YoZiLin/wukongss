@@ -8,12 +8,8 @@ export default {
 }
 </script>
 <style lang="scss">
-  body,*{
-    margin: 0;
-    padding: 0;
-  }
-
-  body{
-    background-color: #f39943;
-  }
+  .main {
+            background-color: #f39943;
+            overflow-y: hidden;
+        }
 </style>

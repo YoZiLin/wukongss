@@ -30,6 +30,7 @@
         width: 100%;
         display: flex;
         top:3px;
+        height: 50px;
 
         .menu-left{
             text-align: left;

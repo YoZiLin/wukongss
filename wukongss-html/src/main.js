@@ -6,7 +6,10 @@ import router from './router'
 import MuseUI from 'muse-ui';
 import '../static/muse-ui/muse-ui.css';
 import '../static/muse-ui/theme-carbon.css' // 使用 carbon 主题(可更改)
+import api from '@/api';
 Vue.use(MuseUI)
+
+Vue.use(api);
 
 Vue.config.productionTip = false
 
