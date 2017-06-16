@@ -26,8 +26,6 @@ const endRequest = (loader) => {
     }
 }
 
-
-
 let api = (type) => {
     let loader = new loaderControll({
         el: document.createElement('div')
