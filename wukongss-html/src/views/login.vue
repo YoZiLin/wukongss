@@ -35,7 +35,7 @@
                 this.$router.push('/register');
             },
             login(){
-                this.api.showMessage('hello world');
+                this.api('hello world');
             }
         }
     }
