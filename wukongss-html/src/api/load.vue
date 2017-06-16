@@ -22,6 +22,10 @@
         opacity: 0.5;
         z-index: 9999;
         text-align: center;
-        padding-top: 35%;
+
+        .mu-circular-progress{
+            top: 50%;
+            margin-top: -90px;
+        }
     }
 </style>
