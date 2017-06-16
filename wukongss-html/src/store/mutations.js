@@ -1,5 +1,5 @@
 const mutations = {
-    SETMUTATIONS(state, type) {
+    setRequestCount(state, type) {
         if (type === '-') {
             state.requestCount--;
         } else if (type === '+') {

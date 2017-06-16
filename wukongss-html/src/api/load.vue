@@ -1,11 +1,11 @@
 <template>
     <div id='load-box' v-show="visible">
-        <mu-circular-progress :size="90" :strokeWidth="5" color="red" />
+        <mu-circular-progress :size="90" color="red"/>
     </div>
-</template >
+</template>
 <script>
     export default {
-        data(){
+        data() {
             return{
                 visible:false,
                 timer:null

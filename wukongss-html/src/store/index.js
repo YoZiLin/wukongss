@@ -13,4 +13,4 @@ const store = new vuex.Store({
     mutations
 });
 
-export default store;
+export default store;                                                  

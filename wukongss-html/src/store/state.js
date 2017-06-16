@@ -1,2 +1,2 @@
 // 请求数量
-export let test = 0;
+export let requestCount = 0;

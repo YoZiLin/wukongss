@@ -12,22 +12,14 @@ loaderControll.prototype.hide = function() {
     this.visible = false;
 }
 
-const loader = new loaderControll({
-    el: document.createElement('div')
-});
-
-const request = function() {
-    let box = document.getElementById('load-box');
-    if (!box) {
-        document.body.appendChild(loader.$el);
-    }
+const request = (loader) => {
     store.dispatch('setRequestCount', '+');
     if (store.state.requestCount > 0) {
         loader.show();
     }
 }
 
-const endRequest = function() {
+const endRequest = (loader) => {
     store.dispatch('setRequestCount', '-');
     if (store.state.requestCount <= 0) {
         loader.hide();
@@ -37,10 +29,17 @@ const endRequest = function() {
 
 
 let api = (type) => {
+    let loader = new loaderControll({
+        el: document.createElement('div')
+    });
+    let box = document.getElementById('load-box');
+    if (!box) {
+        document.body.appendChild(loader.$el);
+    }
     try {
-        request();
+        request(loader);
     } catch (error) {
-        endRequest();
+        endRequest(loader);
     }
 }
 
